@@ -20,10 +20,5 @@ public class Main {
         SheetsIO.addEventListeners(new sheetsSetup(), new sheetReactionListener());
         SheetsIO.build();
 
-        heldData hd = new heldData();
-        hd.createData("pog", "89432389742");
-        System.out.println(hd.searchHDataByName("target"));
-
-//
     }
 }
