@@ -3,10 +3,9 @@ package user.kmCHIB.bot;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
-import user.kmCHIB.bot.commands.heldData;
 import user.kmCHIB.bot.commands.sheetReactionListener;
 import user.kmCHIB.bot.commands.sheetsSetup;
-import user.kmCHIB.bot.commands.testSheetsListener;
+import user.kmCHIB.bot.misc.heldData;
 
 import javax.security.auth.login.LoginException;
 
@@ -19,6 +18,7 @@ public class Main {
                 );
         SheetsIO.addEventListeners(new sheetsSetup(), new sheetReactionListener());
         SheetsIO.build();
+
 
     }
 }

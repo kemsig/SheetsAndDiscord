@@ -1,14 +1,14 @@
-package user.kmCHIB.bot.commands;
+package user.kmCHIB.bot.misc;
 
 import java.io.*;
 import java.util.ArrayList;
 
-/* TO DO
-- add a type of data args (name of data, data)
-- make a reader
-- make a writer
+/* TODO
+✔ add a type of data args (name of data, data)
+✔ make a reader
+✔ make a reader
+- doesn't read the first line
 - dont use binary search for now since we are not making a lot
-name:38210390238
  */
 public class heldData {
     private String filepath;
@@ -24,7 +24,7 @@ public class heldData {
     public void updateData(String target, String input) {
         try {
             ArrayList<String> total = new ArrayList<>();
-            System.out.println("start");
+
             BufferedReader reader = new BufferedReader(new FileReader(filepath));
             String line = reader.readLine();
             String[] aline = line.split(":");
@@ -33,10 +33,8 @@ public class heldData {
                 line = reader.readLine();
                 aline = line.split(":");
                 if (!(aline[0].equalsIgnoreCase(target))) total.add(line);
-                //System.out.println(line);
 
             }line = reader.readLine(); //skips the data line
-            System.out.println("total " + total);
             writingBase(target + ":" + input, total);
 
             total.clear();
@@ -49,13 +47,9 @@ public class heldData {
             for (String v : total){
                 saveData(v);
             }
-            System.out.println("total2 " + total);
-
-            //writingBase(target + ":" + input, total);
 
             reader.close();
         }catch(IOException exception) {}
-        System.out.println("end");
     }
 
     public String searchHDataByName(String name) {
