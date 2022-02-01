@@ -8,14 +8,12 @@ import user.kmCHIB.bot.Sheets.SheetsQuickstart;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 
-public class testSheetsListener {
+public class testSheetsListener extends ListenerAdapter{
 
-
-    /*
-    public void onMessageReceived(MessageReceivedEvent e){
+    public void onMessageReceived(MessageReceivedEvent e) {
         if (e.getAuthor().isBot()) return;
         String message = e.getMessage().getContentRaw();
-        if (message.equalsIgnoreCase("!quickstart")){
+        if (message.equalsIgnoreCase("!quickstart")) {
             SheetsQuickstart sq = new SheetsQuickstart();
             e.getGuild().getCategories();
 
@@ -27,8 +25,8 @@ public class testSheetsListener {
                 ex.printStackTrace();
             }
             sq.printValues();
-            }
-     */
+        }
+    }
 
 
 

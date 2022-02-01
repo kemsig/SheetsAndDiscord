@@ -40,7 +40,6 @@ public class heldData {
             total.clear();
 
             while (line != null){
-                System.out.println(total);
                 total.add(line);
                 line = reader.readLine();
             }

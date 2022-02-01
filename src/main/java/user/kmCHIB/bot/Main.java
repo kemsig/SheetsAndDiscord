@@ -5,6 +5,7 @@ import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import user.kmCHIB.bot.commands.sheetReactionListener;
 import user.kmCHIB.bot.commands.sheetsSetup;
+import user.kmCHIB.bot.commands.testSheetsListener;
 import user.kmCHIB.bot.misc.heldData;
 
 import javax.security.auth.login.LoginException;
@@ -16,7 +17,7 @@ public class Main {
                         GatewayIntent.DIRECT_MESSAGES)
                 .setActivity(Activity.playing("Google Sheets!")
                 );
-        SheetsIO.addEventListeners(new sheetsSetup(), new sheetReactionListener());
+        SheetsIO.addEventListeners(new sheetsSetup(), new sheetReactionListener(), new testSheetsListener());
         SheetsIO.build();
 
 
