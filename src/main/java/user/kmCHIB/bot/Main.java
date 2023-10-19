@@ -12,7 +12,7 @@ import javax.security.auth.login.LoginException;
 
 public class Main {
     public static void main(String[] args) throws LoginException, InterruptedException {
-        JDABuilder SheetsIO = JDABuilder.createDefault("OTM1NzY0NzA1NTIyMzg0ODk2.YfDYyw.3SDIrDW8A29ZDi_qVa_-6ju-Abs",
+        JDABuilder SheetsIO = JDABuilder.createDefault("",
                 GatewayIntent.GUILD_MESSAGES, GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_MESSAGE_REACTIONS, GatewayIntent.GUILD_EMOJIS,
                         GatewayIntent.DIRECT_MESSAGES)
                 .setActivity(Activity.playing("Google Sheets!")
